@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Fleshmarket</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -124,21 +125,30 @@
         .arrow-right {
             margin-right: calc(100vh * 0.2);
         }
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color: white; /* Set link color to white */
+        }
+        a:hover {
+            color: white; /* Keep link color white on hover */
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <div class="images-row">
-            <div class="image-container image1">
+            <a href="placebo/index.html" class="image-container image1">
                 <img src="assets/placebo.png" alt="Image 1 Description">
                 <div class="text-below-image">
+                    <p>PLACEBO</p>
                 </div>
-            </div>
-            <div class="image-container image2">
+            </a>
+            <a href="latenight/index.html" class="image-container image2">
                 <img src="assets/latenightKM.png" alt="Image 2 Description">
                 <div class="text-below-image">
+                    <p>A LATE NIGHT REST STOP</p>
                 </div>
-            </div>
+            </a>
             <div class="image-container image3">
                 <img src="assets/traindragon.jpeg" alt="Image 3 Description">
                 <div class="text-below-image">
@@ -149,11 +159,12 @@
                 <div class="text-below-image">
                 </div>
             </div>
-            <div class="image-container image5">
+            <a href="thescream/index.html" class="image-container image5">
                 <img src="assets/thescreamMFox.JPG" alt="Image 4 Description">
                 <div class="text-below-image">
+                    <p>THE SCREAM</p>
                 </div>
-            </div>
+            </a>
             <div class="image-container image6">
                 <img src="assets/latenightTL.png" alt="Image 4 Description">
                 <div class="text-below-image">
