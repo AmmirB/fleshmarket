@@ -7,6 +7,12 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
         body {
             background-color: black;
             color: white;
@@ -18,9 +24,6 @@
             display: flex;
             flex-direction: column;
         }
-        .header {
-            display: none; /* Removed title and Instagram link */
-        }
         .content {
             display: flex;
             flex-direction: column;
@@ -28,7 +31,8 @@
             height: 100%;
             padding-top: 30px; /* Ensure the content starts below the fixed header */
             box-sizing: border-box;
-            overflow-x: auto; /* Enable horizontal scrolling */
+            overflow-x: auto;
+            overflow-y: hidden;
         }
         .images-row {
             display: flex;
@@ -43,7 +47,7 @@
             align-items: center;
             margin-right: 30px; /* Space between images */
             flex-shrink: 0; /* Prevent shrinking of individual image containers */
-            width: calc(100vh * 0.7); /* Adjust width based on viewport height */
+            width: calc(100vw * 0.7); /* Adjust width based on viewport width */
         }
         .image-container img {
             width: 100%; /* Make images responsive */
@@ -57,42 +61,42 @@
         }
         /* Specific sizes for individual images */
         .image-container.image1 {
-            margin-top: calc(100vh * 0.1);
-            margin-left: calc(100vh * 0.365);
+            margin-top: calc(100vw * 0.05);
+            margin-left: calc(100vw * 0.21);
             width: 55%;   
             height: auto;
         }
         .image-container.image2 {
-            margin-left: calc(100vh * 0.2);
+            margin-left: calc(100vw * 0.17);
             width: 35%;
             height: auto;
         }
         .image-container.image3 {
-            margin-top: calc(100vh * 0.05);
-            margin-left: calc(100vh * 0.15);
+            margin-top: calc(100vw * 0.05);
+            margin-left: calc(100vw * 0.12);
             width: 20%;
             height: auto; 
         }
         .image-container.image4 {
-            margin-top: calc(100vh * 0.4);
-            margin-left: calc(100vh * 0.028);
+            margin-top: calc(100vw * 0.20);
+            margin-left: calc(100vw * 0.028);
             width: 25%;
             height: auto;
         }
         .image-container.image5 {
-            margin-left: calc(100vh * 0.1);
+            margin-left: calc(100vw * 0.1);
             width: 35%;
             height: auto;
         }
         .image-container.image6 {
-            margin-top: calc(100vh * 0.2);
-            margin-left: calc(100vh * 0.1);
+            margin-top: calc(100vw * 0.1);
+            margin-left: calc(100vw * 0.1);
             width: 45%;
             height: auto;
         }
         .image-container.image7 {
-            margin-top: calc(100vh * 0.001);
-            margin-left: calc(100vh * 0.1);
+            margin-top: calc(100vw * 0.001);
+            margin-left: calc(100vw * 0.1);
             width: 70%;
             height: auto;
         }
@@ -120,10 +124,10 @@
             user-select: none; /* Prevent text selection */
         }
         .arrow-left {
-            margin-left: calc(100vh * 0.2);
+            margin-left: calc(100vw * 0.1);
         }
         .arrow-right {
-            margin-right: calc(100vh * 0.2);
+            margin-right: calc(100vw * 0.1);
         }
         a {
             text-decoration: none; /* Remove underline from links */
