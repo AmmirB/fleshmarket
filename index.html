@@ -28,7 +28,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             padding-top: 30px; /* Ensure the content starts below the fixed header */
             box-sizing: border-box;
             overflow-x: auto;
@@ -40,6 +40,9 @@
             box-sizing: border-box; /* Ensure padding is included in width calculation */
             white-space: nowrap; /* Prevent line breaks within the flex container */
             flex-shrink: 0; /* Prevent shrinking of the flex container */
+            height: 100vh;
+            overflow-y: hidden;
+            overflow-x: auto;
         }
         .image-container {
             display: inline-block; /* Ensures that each image-container takes its own space horizontally */
@@ -52,6 +55,8 @@
         .image-container img {
             width: 100%; /* Make images responsive */
             height: auto; /* Maintain aspect ratio */
+            max-height: 80vh;
+            object-fit: contain;
             display: block; /* Ensures no extra space below the image */
         }
         .text-below-image {
@@ -61,7 +66,7 @@
         }
         /* Specific sizes for individual images */
         .image-container.image1 {
-            margin-top: calc(100vw * 0.05);
+            margin-top: calc(100vh * 0.05);
             margin-left: calc(100vw * 0.21);
             width: 55%;   
             height: auto;
@@ -72,13 +77,13 @@
             height: auto;
         }
         .image-container.image3 {
-            margin-top: calc(100vw * 0.05);
+            margin-top: calc(100vh * 0.05);
             margin-left: calc(100vw * 0.12);
             width: 20%;
             height: auto; 
         }
         .image-container.image4 {
-            margin-top: calc(100vw * 0.20);
+            margin-top: calc(100vh * 0.20);
             margin-left: calc(100vw * 0.028);
             width: 25%;
             height: auto;
@@ -89,13 +94,13 @@
             height: auto;
         }
         .image-container.image6 {
-            margin-top: calc(100vw * 0.1);
+            margin-top: calc(100vh * 0.1);
             margin-left: calc(100vw * 0.1);
             width: 45%;
             height: auto;
         }
         .image-container.image7 {
-            margin-top: calc(100vw * 0.001);
+            margin-top: calc(100vh * 0.001);
             margin-left: calc(100vw * 0.1);
             width: 70%;
             height: auto;
@@ -120,7 +125,7 @@
             display: flex;
             align-items: center;
             color: white;
-            font-size: 24px;
+            font-size: clamp(1rem, 2.5vw, 3rem);
             user-select: none; /* Prevent text selection */
         }
         .arrow-left {
